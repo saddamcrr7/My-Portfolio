@@ -1,0 +1,36 @@
+=heading-font($weight,$size,$l-height,$color)
+    font-family: "Rubik",Arial,Helvetica,Sans-serif
+    font-weight: $weight
+    font-size: $size
+    line-height: $l-height
+    color: $color
+
+=montserrat($weight,$size,$l-height,$color)
+    font-family: "Montserrat",Arial,Helvetica,Sans-serif
+    font-weight: $weight
+    font-size: $size
+    line-height: $l-height
+    color: $color
+    
+=progress-bar($value)
+    content: $value
+    margin-top: 10px
+    margin-left: 10
+    width: 30px
+    height: 15px
+    position: absolute
+    right: -4%
+    border-radius: 50px
+    text-align: center
+    +montserrat(500,12px,15px,$white)
+    background: $blue
+=hover-line($width)
+    content: ''
+    width: $width
+    height: 5px
+    background: $green
+    position: absolute
+    left: 0
+    bottom: -5px
+    z-index: -2
+    transition: all 1s
