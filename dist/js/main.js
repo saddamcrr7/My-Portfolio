@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
 
     $(window).scroll(function() {
-        if ($(document).scrollTop() > 700) {
+        if ($(document).scrollTop() > 725) {
             $(".menu, .mobile-menu").addClass("fixed");
         } else {
             $(".menu, .mobile-menu").removeClass("fixed");
@@ -59,7 +59,6 @@ $(document).ready(function() {
     });
 
     $(".header-btn button.skewSwipe").click(function() {
-        console.log("clicked")
         $('html, body').animate({
             scrollTop: parseInt($("#about").offset().top)
         }, 1000);
