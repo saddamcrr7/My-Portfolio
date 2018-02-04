@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+
+  
     var a = 0;
     $(window).scroll(function() {
         var oTop = $(".skill").offset().top - window.innerHeight;
@@ -149,6 +151,9 @@ $(document).ready(function() {
     delay: 200,
     viewFactor: 0.5
   });
-
-    
-})
+  var Body = $('body');
+  Body.addClass('loaded');
+  // $(window).load(function() {
+  //   $('body').addClass('loaded');
+  // }); 
+});

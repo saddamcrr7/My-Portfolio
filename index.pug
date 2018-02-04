@@ -17,15 +17,19 @@ html(lang="en")
         link(rel="stylesheet", href="dist/css/style.css")
         title Hossain Saddam
     body
-        
+
+        #loader-wrapper
+            #loder
+            .loder-section.section-left
+            .loder-section.section-right
+
         header#header
             .canvas-container
                 canvas#gravity
             .container-fluid
                 .header-content
-                    h1 Hi, I'm 
-                        span Hossain 
-                        span Saddam
+                    .text-gradient
+                        h1 Hi, I'm Hossain Saddam
                     h2 I build awesome experiences for the web
                     .header-btn
                         button.skewSwipe Explore Me
@@ -71,7 +75,6 @@ html(lang="en")
                                 i.fa.fa-twitter
                             a(href="https://www.linkedin.com/in/saddamcrr7/", target='_blank')
                                 i.fa.fa-linkedin
-                       
         section#about.py-5
             .container
                 .about-heading.text-center.text-uppercase
@@ -279,4 +282,5 @@ html(lang="en")
     script(src="dist/js/bootstrap.min.js")
     script(src="dist/js/canvas.js")
     script(src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js")
     script(src="dist/js/main.js")
