@@ -70,19 +70,6 @@
             &.section-right
                 transform: translateX(100%)
                 transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000)
-// .loaded #loader-wrapper .loader-section.section-left
-    
-// .loaded #loader-wrapper .loader-section.section-left
-    
-
-// .loader #loader
-//     opacity: 0
-//     transition: all 0.3s ease-out
-// .loaded #loader-wrapper
-
-
-
-
 .canvas-container
     position: absolute
     width: 100%
@@ -104,17 +91,18 @@
     top: 50%
     text-align: center
     transform: translate(-50%, -50%)
-    h1
-        +heading-font(500,3.75rem,85px, $white)
-        pointer-events: none            
-        span
-            text-transform: uppercase
-            +montserrat(700,3.75rem,85px,$blue)
-            &:last-child
-                color: $green
-    h2
-        +heading-font(500,2.75rem,60px, $white)
-        pointer-events: none
+    .text-gradient
+        background-image: $primary-gradient-color
+        background-repeat: no-repeat
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        h1
+            +heading-font(500,3.75rem,85px, $white)
+            pointer-events: none
+        h2
+            +heading-font(500,2.75rem,60px, $white)
+            pointer-events: none
+
 .header-btn
     margin: auto
     width: 270px
@@ -123,33 +111,34 @@
     position: relative
     span
         position: absolute
-        top: 65%
+        top: 56%
         left: -400%
         width: 500px
         height: 2px
-        background: $green  
-        transform: translate(-50%, -50%)
+        transform: translateX(-50%)
+        background: $primary-gradient-color 
         transition: all 350ms cubic-bezier(.215,.61,.215,1)
     &:hover span
         left: 50%                
     button.skewSwipe
         float: left
-        border: 5px solid $green
+        // border: 5px solid $primary-gradient-color
+        border: none
         outline: none
         background: transparent
         padding: 15px 50px
         margin-top: 20px
-        +montserrat(400,1rem,20px,$green)
+        +montserrat(700,1rem,20px,$primary-color)
         letter-spacing: 5px
         z-index: 6
         cursor: pointer
         position: relative
-        transition: all 0.5s 
+        transition: all 0.5s cubic-bezier(.215,.61,.215,1)
         overflow: hidden
         appearance: none
         &:before
             content: ''
-            background: $green
+            background: $primary-gradient-color
             width: 460px
             height: 57px
             position: absolute
@@ -162,7 +151,7 @@
         color: $white
         letter-spacing: 7px
     &:hover button.skewSwipe::before, 
-        left: -10%
+        left: -40%
 .fixed
     position: fixed
     z-index: 99
@@ -172,7 +161,7 @@
     width: 100%
     height: 60px
     background: rgb(27, 27, 27)
-    border-bottom: 3px solid $green
+    border-bottom: 3px solid $primary-color
     nav a
         padding: 10px 20px
         float: left
@@ -185,7 +174,7 @@
         &:last-child
             padding-right: 0
         &:hover
-            color: $blue  
+            color: $primary-color 
     .social-icon
         margin: 0 0 0 auto
         a
@@ -197,9 +186,9 @@
             line-height: 35px
             transition: all 0.3s
             &:hover
-                color: $blue
+                color: $primary-color
 .nav-active
-    color: $blue !important
+    color: $primary-color !important
 .mobile-menu
     width: 100%
     background: rgb(27, 27, 27)
@@ -208,7 +197,7 @@
     .humbager
         width: 100%
         text-align: center
-        border-bottom: 3px solid $green
+        border-bottom: 3px solid $primary-color
         svg
             margin-top: 10px
             cursor: pointer
@@ -243,13 +232,12 @@
 #about
     width: 100%
     overflow: hidden
-    border-bottom: 1px solid $green
     h1
         +heading-font(700,72px,100px, #1b1b1b)
         pointer-events: none
         svg
             height: 55px
-            fill: $green
+            fill: $primary-color
             margin-left: 20px
     
     .about-content
@@ -273,13 +261,13 @@
             margin-left: 15px
             font-weight: bold
             span
-                color: $green
+                color: $primary-color
             a
                 color: $blue
     .right-content
         margin-top: 10px
         p
-            border-bottom: 1px solid $green
+            border-bottom: 1px solid $primary-color
             margin: 0
             font-family: 'Lora', serif;
             line-height: 40px
@@ -289,7 +277,7 @@
         .buttons
             a
                 text-decoration: none
-                +montserrat(700,16px,50px,$green)
+                +montserrat(700,16px,50px,$primary-color)
                 transition: all .5s;
             .cv-button, .hire-button
                 width: 170px
@@ -297,13 +285,13 @@
                 text-align: center
                 border-radius: 60px
                 position: relative
-                border: 2px solid $green
+                border: 2px solid $primary-color
                 z-index: 2
                 overflow: hidden
                 transition: all .5s
                 &:before
                     content: ''
-                    background: $green
+                    background: $primary-color
                     width: 460px
                     height: 57px
                     position: absolute
@@ -342,7 +330,7 @@
             content: ''
             width: 65px
             height: 5px
-            background: $green
+            background: $primary-color
             position: absolute
             left: 41.5%
             transition: all 1s
@@ -350,9 +338,42 @@
             z-index: -1
     &:hover .skill-heading h1:before
         width: 175px
+    .left-content
+        .skill-progress
+            &:nth-last-of-type(1n+0)
+                .skill-progress-bar
+                        background: $primary-color
+            &:nth-last-of-type(2n+0)
+                .skill-progress-bar
+                        background: $blue
+            &:nth-last-of-type(3n+0)
+                .skill-progress-bar
+                        background: $green
+    .middle-content
+        .skill-progress
+            &:nth-last-of-type(1n+0)
+                .skill-progress-bar
+                        background: $blue
+            &:nth-last-of-type(2n+0)
+                .skill-progress-bar
+                        background: $green
+            &:nth-last-of-type(3n+0)
+                .skill-progress-bar
+                        background: $yellow
+    .right-content
+        .skill-progress
+            &:nth-last-of-type(1n+0)
+                .skill-progress-bar
+                        background: $green
+            &:nth-last-of-type(2n+0)
+                .skill-progress-bar
+                        background: $yellow
+            &:nth-last-of-type(3n+0)
+                .skill-progress-bar
+                        background: $primary-color
 .skill-title
     +montserrat(700,16px,30px,#222222)
-    margin: 10px 0  
+    margin: 10px 0 
 .skill-progress
     margin-bottom: 30px
     width: 100%
@@ -364,14 +385,13 @@
         top: 0
         left: 0
         height: 5px
-        background: $green
-        transition: all 1s
+        transition: all 1s cubic-bezier(0.22, 0.61, 0.54, 1.15)
         &:before
             content: ''
             height: 10px
             width: 10px
             border-radius: 10px
-            background: $blue
+            background: $primary-color
             position: absolute
             top: -50%
             right: 0
@@ -397,20 +417,20 @@
 #portfolio
     position: relative
     overflow: hidden
-    &:before
-        content: '';
-        width: 100%;
-        height: 1560px;
-        z-index: -1000;
-        background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
-        transform-origin: left bottom;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: skew(0deg, -49deg);
+    // &:before
+    //     content: '';
+    //     width: 100%;
+    //     height: 1560px;
+    //     z-index: -1000;
+    //     background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+    //     transform-origin: left bottom;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     transform: skew(0deg, -49deg);
     .portfolio-heading
         h1
-            +heading-font(700,50px,51px, $white)
+            +heading-font(700,50px,51px, #000)
             span
                 color: #000000
         p
@@ -519,7 +539,7 @@ figure.portfolio-item.hover:after
         
 #services
     background: #f7f7f7
-    border-bottom: 1px solid rgba(0,0,255,0.1)
+    // border-bottom: 1px solid rgba(0,0,255,0.1)
     .service-heading
         p
             +montserrat(400,12px,12px,#222222)
@@ -532,7 +552,7 @@ figure.portfolio-item.hover:after
                 content: ''
                 width: 100px
                 height: 5px
-                background: $green
+                background: $primary-color
                 position: absolute
                 left: 40%
                 bottom: -5px
@@ -555,7 +575,7 @@ figure.portfolio-item.hover:after
         border-radius: 3px
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07)
         .item-icon
-            background: rgba(0, 0, 0, 0.05)
+            background: $yellow
             width: 90px
             height: 90px
             padding: 18px
@@ -577,7 +597,7 @@ figure.portfolio-item.hover:after
         &:hover
             box-shadow: 0 0px 10px rgba(0, 0, 0, 0.07)
             .item-icon
-                background: $blue
+                background: $primary-color
                 border-radius: 5px
                 svg
                     fill: #ffffff
@@ -588,7 +608,7 @@ figure.portfolio-item.hover:after
 
 .contact-header
     position: relative
-    background: linear-gradient(to bottom, rgba(36, 107, 173, 0.78) 0%, rgba(0, 200, 200, 0.81) 100%)
+    background: linear-gradient(to bottom, rgba(228, 34, 63, 0.82) 0%, rgba(228, 34, 150, 0.68) 100%)
     h2
         +heading-font(700,5rem,100px, $white)
     p
@@ -599,7 +619,7 @@ figure.portfolio-item.hover:after
         color: $white  
     .top-svg
         svg
-            fill: #ffffff
+            fill: #f7f7f7
             position: absolute
             top: 0
             left: 0
@@ -607,7 +627,7 @@ figure.portfolio-item.hover:after
             bottom: auto
     .bottom-svg
         svg
-            fill: #ffffff
+            fill: $white
             position: absolute
             left: 0
             right: 0
@@ -620,13 +640,13 @@ figure.portfolio-item.hover:after
     box-shadow: 0 40px 45px rgba(0,0,0, 0.1)
     max-width: 700px
     margin: 0 auto
-    border-top: 5px solid #65C3AD
+    border-top: 5px solid $primary-color
     border-top-left-radius: 4px
     border-top-right-radius: 4px
     form
         display: block
     input
-        background-color: #F8F8F8
+        background-color: #f8f8f8
         border: 1px solid #f8f8f8
         color: #3f3f46
         float:left
@@ -634,33 +654,46 @@ figure.portfolio-item.hover:after
         margin: 15px auto
         padding: 20px
         width: 48%
+        font-family: 'lora',sans-serif
+        font-weight: bold
+        color: $primary-color
+        border-radius: 4px
         transition: border linear 0.2s,background-color linear 0.2s,box-shadow linear 0.2s
         &::-webkit-input-placeholder
-            color: #65C3AD
+            color: $primary-color
             font-family: 'lora',sans-serif
             font-weight: bold
+        &:focus
+            outline: 2px solid $primary-color
     textarea
-        background-color: #F8F8F8
+        background-color: #f8f8f8
         border: 1px solid #f8f8f8
-        color: #3f3f46
+        color: $primary-color
         font-size: 16px
         margin: 15px auto
         padding: 20px
         width: 100%
         min-width: 100%
         max-width: 100%
+        outline: none
+        border-radius: 4px
+        font-family: 'lora',sans-serif
+        font-weight: bold
         transition: border linear 0.2s,background-color linear 0.2s,box-shadow linear 0.2s
         &::-webkit-input-placeholder
-            color: #65C3AD
+            color: $primary-color
             font-family: 'lora',sans-serif
             font-weight: bold
+        &:focus
+            outline: 2px solid $primary-color
+            
     button
         background-color: #F8F8F8
         width: 100%
         margin: 15px auto
         padding: 20px
         border: none
-        background-color: #65C3AD
+        background-color: $primary-color
         cursor: pointer
         color: $white
         text-transform: uppercase

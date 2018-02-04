@@ -23,11 +23,11 @@ $(document).ready( function() {
         _this.config = {
 
             star: {
-                color: 'rgba(255, 255, 255, .8)'
+                color: 'rgb(136, 89, 191)'
             },
 
             line: {
-                color: 'rgba(255, 255, 255, .8)',
+                color: 'rgb(247, 134, 77)',
                 width: 0.15
             },
 
