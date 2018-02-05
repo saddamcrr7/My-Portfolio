@@ -156,4 +156,16 @@ $(document).ready(function() {
   // $(window).load(function() {
   //   $('body').addClass('loaded');
   // }); 
+
+
+  var scene = $('.parallax-content ul').get(0);
+  console.log(scene);
+  
+  var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+  });
+  parallaxInstance.friction(0.2, 0.2);
+  console.log(parallaxInstance);
+  
+  
 });

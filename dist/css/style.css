@@ -385,6 +385,7 @@
 
 #about {
   width: 100%;
+  background: #ffffff;
   overflow: hidden;
 }
 
@@ -637,9 +638,9 @@
   top: 0;
   left: 0;
   height: 5px;
-  -webkit-transition: all 1s cubic-bezier(0.22, 0.61, 0.54, 1.15);
-  -o-transition: all 1s cubic-bezier(0.22, 0.61, 0.54, 1.15);
-  transition: all 1s cubic-bezier(0.22, 0.61, 0.54, 1.15);
+  -webkit-transition: all 1s 0.5s cubic-bezier(0.22, 0.61, 0.54, 1.15);
+  -o-transition: all 1s 0.5s cubic-bezier(0.22, 0.61, 0.54, 1.15);
+  transition: all 1s 0.5s cubic-bezier(0.22, 0.61, 0.54, 1.15);
 }
 
 .skill-progress .skill-progress-bar:before {
@@ -818,6 +819,7 @@
 #portfolio {
   position: relative;
   overflow: hidden;
+  background: #ffffff;
 }
 
 #portfolio .portfolio-heading h1 {
@@ -1068,7 +1070,7 @@ figure.portfolio-item.hover:after {
 }
 
 .service-content .service-item .item-icon {
-  background: #ffd13c;
+  background: #f44336;
   width: 90px;
   height: 90px;
   padding: 18px;
@@ -1081,6 +1083,7 @@ figure.portfolio-item.hover:after {
 
 .service-content .service-item .item-icon svg {
   height: 50px;
+  fill: #ffffff;
 }
 
 .service-content .service-item h4 {
@@ -1111,13 +1114,35 @@ figure.portfolio-item.hover:after {
   border-radius: 5px;
 }
 
-.service-content .service-item:hover .item-icon svg {
-  fill: #ffffff;
-}
-
 #contact {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a00dd14dd25d32b799b8e6e0270fd535&auto=format&fit=crop&w=1504&q=80") no-repeat fixed center center/cover;
+}
+
+#contact .parallax-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#contact .parallax-content ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150vh;
+  pointer-events: none;
+}
+
+#contact .parallax-content ul li img {
+  vertical-align: middle;
+  position: absolute;
+  -webkit-animation: spin 3s infinite linear;
+  animation: spin 3s infinite linear;
 }
 
 .contact-header {
@@ -1269,6 +1294,25 @@ figure.portfolio-item.hover:after {
 .form-container button:hover, .form-container button:active, .form-container button:focus {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+#empty-area {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -99;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+  background: #212121;
+  z-index: -99;
 }
 
 @-webkit-keyframes spin {
