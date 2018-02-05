@@ -740,6 +740,77 @@ figure.portfolio-item.hover:after
     height: 300px
     background: #212121
     z-index: -99
-
+    .scroll-top
+        width: 50px
+        height: 40px
+        margin: 0 auto
+        background: $primary-color
+        text-align: center
+        cursor: pointer
+        transition: all 0.3s
+        i
+            line-height: 35px
+            color: $white
+        &:hover
+            background: $red    
+    .social-icon
+        margin-top: 70px
+        ul
+            width: 310px
+            height: 70px
+            margin: 0 auto
+            li
+                width: 50px
+                height: 50px
+                margin: 0 auto
+                float: left
+                margin-right: 15px
+                background: $white
+                border-radius: 50px
+                &:last-child
+                    margin: 0
+                a
+                    line-height: 60px
+                    padding: 10px
+                    color: #212121
+                    transition: all 0.3s
+                    &:hover
+                        color: $primary-color
+.fotter-copyright 
+    width: 100%
+    text-align: center
+    color: $white
+    margin-top: 20px
+    p
+        margin: 10px 0
+        font-size: 13px
+        font-family: 'lora',sans-serif
+        letter-spacing: 1px
+        &:last-child
+            font-size: 14px
+            span
+                color: $red
+                font-weight: bold
+            i
+                color: $red
+    
 @import animation 
 @import responsive
+::-webkit-scrollbar
+    width: 7px
+    height: 7px
+
+/* Track */
+::-webkit-scrollbar-track
+    box-shadow: inset 0 0 5px grey
+    border-radius: mone
+    background: #212121
+
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: $red
+    border-radius: none
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+    background: $yellow

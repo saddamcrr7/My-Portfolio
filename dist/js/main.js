@@ -159,13 +159,13 @@ $(document).ready(function() {
 
 
   var scene = $('.parallax-content ul').get(0);
-  console.log(scene);
-  
   var parallaxInstance = new Parallax(scene, {
     relativeInput: true
   });
   parallaxInstance.friction(0.2, 0.2);
-  console.log(parallaxInstance);
   
-  
+  $(".scroll-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
 });
