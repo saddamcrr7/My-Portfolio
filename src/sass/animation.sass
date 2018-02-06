@@ -4,3 +4,28 @@
     
     100% 
         transform: rotate(360deg)
+@keyframes zoomIn-zoomOut
+    0%
+        transform: scale(1)
+    20%
+        transform: scale(1.2)
+    40%
+       transform: scale(1.6) 
+    50%
+        transform: scale(1)
+    50%
+        transform: scale(1.2)
+    75%
+        transform: scale(1.6) 
+    100%
+        transform: scale(1)
+
+@keyframes pulse
+    0%
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7)
+    40%
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7)
+    80%
+        box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0)
+    100%
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0)

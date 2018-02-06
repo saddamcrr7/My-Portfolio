@@ -151,21 +151,26 @@ $(document).ready(function() {
     delay: 200,
     viewFactor: 0.5
   });
-  var Body = $('body');
-  Body.addClass('loaded');
-  // $(window).load(function() {
-  //   $('body').addClass('loaded');
-  // }); 
-
-
-  var scene = $('.parallax-content ul').get(0);
-  var parallaxInstance = new Parallax(scene, {
-    relativeInput: true
-  });
-  parallaxInstance.friction(0.2, 0.2);
   
-  $(".scroll-top").click(function() {
-    $("html, body").animate({ scrollTop: 0 }, "slow");
-    return false;
-  });
+    // var text = $('.header-btn button.skewSwipe').textContent || $('.header-btn button.skewSwipe').innerText;
+
+    // console.log(text);
+    
+
+    var scene = $('.parallax-content ul').get(0);
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+    parallaxInstance.friction(0.2, 0.2);
+    
+    $(".scroll-top").click(function() {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+      return false;
+    });
+    
+    var Body = $('body');
+    Body.addClass('loaded');
+    // $(window).load(function() {
+    //   $('body').addClass('loaded');
+  // }); 
 });

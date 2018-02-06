@@ -239,6 +239,19 @@
   transition: all .5s;
 }
 
+.header-btn button.skewSwipe:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  -webkit-animation: pulse 3s linear infinite;
+  animation: pulse 3s linear infinite;
+}
+
 .header-btn:hover button.skewSwipe {
   color: #ffffff;
   letter-spacing: 7px;
@@ -1070,7 +1083,7 @@ figure.portfolio-item.hover:after {
 }
 
 .service-content .service-item .item-icon {
-  background: #f44336;
+  background: #D92049;
   width: 90px;
   height: 90px;
   padding: 18px;
@@ -1194,10 +1207,10 @@ figure.portfolio-item.hover:after {
 .form-container {
   padding: 40px;
   position: relative;
-  -webkit-box-shadow: 0 40px 45px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 40px 45px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 15px auto;
   border-top: 5px solid #e4223f;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -1285,8 +1298,8 @@ figure.portfolio-item.hover:after {
   -moz-appearance: none;
   appearance: none;
   border-radius: 4px;
-  -webkit-box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.09);
-  box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.09);
+  box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.09);
   -webkit-transition: all ease .2s;
   -o-transition: all ease .2s;
   transition: all ease .2s;
@@ -1311,7 +1324,7 @@ figure.portfolio-item.hover:after {
   width: 50px;
   height: 40px;
   margin: 0 auto;
-  background: #e4223f;
+  background: #D92049;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -1325,7 +1338,7 @@ figure.portfolio-item.hover:after {
 }
 
 #footer .scroll-top:hover {
-  background: #f44336;
+  background: #e4223f;
 }
 
 #footer .social-icon {
@@ -1384,12 +1397,14 @@ figure.portfolio-item.hover:after {
 }
 
 .fotter-copyright p:last-child span {
-  color: #f44336;
+  color: #e4223f;
   font-weight: bold;
 }
 
 .fotter-copyright p:last-child i {
-  color: #f44336;
+  color: #e4223f;
+  -webkit-animation: zoomIn-zoomOut 1s infinite linear;
+  animation: zoomIn-zoomOut 1s infinite linear;
 }
 
 @-webkit-keyframes spin {
@@ -1411,6 +1426,106 @@ figure.portfolio-item.hover:after {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes zoomIn-zoomOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  40% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn-zoomOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  20% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  40% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  40% {
+    -webkit-box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7), 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  40% {
+    -webkit-box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  80% {
+    -webkit-box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 0 0 60px rgba(255, 255, 255, 0);
   }
 }
 
