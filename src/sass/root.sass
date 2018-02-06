@@ -487,27 +487,52 @@
                 width: 30px
                 box-shadow: none
         .project
-            cursor: pointer
             position: relative
             margin: 30px auto
-            max-width: 400px
-            height: 200px
+            max-width: 350px
+            height: 100%
             overflow: hidden
-            padding: 0 10px
-            box-shadow: 12px 11px 25px 4px rgba(46, 61, 73, 0.2)
-            img
+            box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2)
+            .main-content
                 width: 100%
-                vertical-align: middle
-            .overley
-                p.title
-                    position: absolute
-                    left: 0
-                    bottom: 0
+                height: 300px
+                overflow: hidden
+                img
                     width: 100%
+                    
+                    vertical-align: middle
+                .overley
+                    position: absolute
+                    top: 0
+                    left: 0
+                    height: 300px
+                    display: none
+                    width: 100%
+                    background: linear-gradient(to bottom, rgba(228, 34, 63, 0.82) 0%, rgba(228, 34, 150, 0.68) 100%)
+                    overflow: hidden
+                    .icon
+                        margin: 150px auto
+                        max-width: 100px
+                        i
+                            font-size: 25px
+                            color: $white
+                        .view
+                            margin-right: 20px
+                            cursor: pointer
+                        .link
+                            margin-left: 20px
+            &:hover
+                .overley
+                    display: block
+
+            .title
+                padding: 10px 10px
+                h5
+                    +montserrat(700,15px,16px,$primary-color)
+                p
                     margin: 0
-                    text-align: center
-                    color: #ffffff
-                    background: #000000
+                    font-size: 13px
+                    font-family: 'lora',sans-serif
 
         
 #services

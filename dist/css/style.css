@@ -935,31 +935,79 @@
 }
 
 #portfolio .portfolio-project .project {
-  cursor: pointer;
   position: relative;
   margin: 30px auto;
-  max-width: 400px;
-  height: 200px;
+  max-width: 350px;
+  height: 100%;
   overflow: hidden;
-  padding: 0 10px;
-  -webkit-box-shadow: 12px 11px 25px 4px rgba(46, 61, 73, 0.2);
-  box-shadow: 12px 11px 25px 4px rgba(46, 61, 73, 0.2);
+  -webkit-box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 }
 
-#portfolio .portfolio-project .project img {
+#portfolio .portfolio-project .project .main-content {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#portfolio .portfolio-project .project .main-content img {
   width: 100%;
   vertical-align: middle;
 }
 
-#portfolio .portfolio-project .project .overley p.title {
+#portfolio .portfolio-project .project .main-content .overley {
   position: absolute;
+  top: 0;
   left: 0;
-  bottom: 0;
+  height: 300px;
+  display: none;
   width: 100%;
-  margin: 0;
-  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 34, 63, 0.82)), to(rgba(228, 34, 150, 0.68)));
+  background: -webkit-linear-gradient(top, rgba(228, 34, 63, 0.82) 0%, rgba(228, 34, 150, 0.68) 100%);
+  background: -o-linear-gradient(top, rgba(228, 34, 63, 0.82) 0%, rgba(228, 34, 150, 0.68) 100%);
+  background: linear-gradient(to bottom, rgba(228, 34, 63, 0.82) 0%, rgba(228, 34, 150, 0.68) 100%);
+  overflow: hidden;
+}
+
+#portfolio .portfolio-project .project .main-content .overley .icon {
+  margin: 150px auto;
+  max-width: 100px;
+}
+
+#portfolio .portfolio-project .project .main-content .overley .icon i {
+  font-size: 25px;
   color: #ffffff;
-  background: #000000;
+}
+
+#portfolio .portfolio-project .project .main-content .overley .icon .view {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-project .project .main-content .overley .icon .link {
+  margin-left: 20px;
+}
+
+#portfolio .portfolio-project .project:hover .overley {
+  display: block;
+}
+
+#portfolio .portfolio-project .project .title {
+  padding: 10px 10px;
+}
+
+#portfolio .portfolio-project .project .title h5 {
+  font-family: "Montserrat",Arial,Helvetica,Sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 16px;
+  color: #e4223f;
+}
+
+#portfolio .portfolio-project .project .title p {
+  margin: 0;
+  font-size: 13px;
+  font-family: 'lora',sans-serif;
 }
 
 #services {
