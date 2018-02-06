@@ -922,6 +922,7 @@
   -webkit-box-shadow: inset 0 0 4px #32d5ba;
   box-shadow: inset 0 0 4px #32d5ba;
   overflow: hidden;
+  display: block;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -940,6 +941,7 @@
   max-width: 350px;
   height: 100%;
   overflow: hidden;
+  background: #ffffff;
   -webkit-box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
   box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 }
@@ -986,6 +988,11 @@
 
 #portfolio .portfolio-project .project .main-content .overley .icon .link {
   margin-left: 20px;
+}
+
+#portfolio .portfolio-project .project:hover {
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
 #portfolio .portfolio-project .project:hover .overley {
@@ -1123,30 +1130,6 @@
   width: 100%;
   margin-bottom: 300px;
   background: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a00dd14dd25d32b799b8e6e0270fd535&auto=format&fit=crop&w=1504&q=80") no-repeat fixed center center/cover;
-}
-
-#contact .parallax-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-#contact .parallax-content ul li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150vh;
-  pointer-events: none;
-}
-
-#contact .parallax-content ul li img {
-  vertical-align: middle;
-  position: absolute;
-  -webkit-animation: spin 3s infinite linear;
-  animation: spin 3s infinite linear;
 }
 
 .contact-header {
@@ -1298,6 +1281,26 @@
 .form-container button:hover, .form-container button:active, .form-container button:focus {
   -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.parallax-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.parallax-content ul li {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200vh;
+}
+
+.parallax-content ul li img {
+  vertical-align: middle;
+  position: absolute;
+  -webkit-animation: spin 3s infinite linear;
+  animation: spin 3s infinite linear;
 }
 
 #footer {

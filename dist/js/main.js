@@ -157,7 +157,11 @@ $(document).ready(function() {
     // console.log(text);
     
 
-    var scene = $('.parallax-content ul').get(0);
+    var scene = $('#portfolio .parallax-content ul').get(0);
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: true
+    });
+    var scene = $('#contact .parallax-content ul').get(0);
     var parallaxInstance = new Parallax(scene, {
       relativeInput: true
     });
