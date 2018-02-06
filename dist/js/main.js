@@ -77,7 +77,7 @@ $(document).ready(function() {
       });
     }
   });
-
+  $('.portfolio-project').owlCarousel();
   window.sr = ScrollReveal();
   sr.reveal('.about-heading',{
     duration: 2000,

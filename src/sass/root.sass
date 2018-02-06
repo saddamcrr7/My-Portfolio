@@ -460,7 +460,55 @@
         .github
             padding: 8% 20%
             float: left
-    
+    .portfolio-project
+        width: 100%
+        height: 100%
+        .owl-item
+            float: left
+        .owl-nav.disabled
+            display: none
+        .owl-dots
+            width: 150px
+            margin: 0 auto
+            .owl-dot
+                overflow: hidden
+                margin: 0 10px
+                float: left
+                cursor: pointer
+                width: 25px
+                height: 8px
+                border-radius: 8px
+                // background: #cccccc
+                box-shadow: inset 0 0 4px $green
+                overflow: hidden
+                transition: all 0.3s ease
+            .active
+                background: $red
+                width: 30px
+                box-shadow: none
+        .project
+            cursor: pointer
+            position: relative
+            margin: 30px auto
+            max-width: 400px
+            height: 200px
+            overflow: hidden
+            padding: 0 10px
+            box-shadow: 12px 11px 25px 4px rgba(46, 61, 73, 0.2)
+            img
+                width: 100%
+                vertical-align: middle
+            .overley
+                p.title
+                    position: absolute
+                    left: 0
+                    bottom: 0
+                    width: 100%
+                    margin: 0
+                    text-align: center
+                    color: #ffffff
+                    background: #000000
+
         
 #services
     background: #f7f7f7
