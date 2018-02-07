@@ -21,6 +21,7 @@ $(document).ready(function() {
 
     $('.humbager svg').click(function() {
       $(".mobile-menu nav").toggleClass('mobile-nav-active');
+      $(".humbager").toggleClass('humbager-active');
     });
 
     $('.mobile-menu nav a').click(function() {
@@ -77,7 +78,45 @@ $(document).ready(function() {
       });
     }
   });
-  $('.portfolio-project').owlCarousel();
+  $('.portfolio-project').owlCarousel({
+        items:3,
+        slideBy: 3,
+        loop:true,
+        lazyContent: true,
+        margin:10,
+        mergeFit: true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true
+    }
+  );
+
+
+//   var isBreakPoint = function (bp) {
+//     var bps = [320, 480, 768, 1024],
+//         w = $(window).width(),
+//         min, max
+//     for (var i = 0, l = bps.length; i < l; i++) {
+//       if (bps[i] === bp) {
+//         min = bps[i-1] || 0
+//         max = bps[i]
+//         break
+//       }
+//     }
+//     return w > min && w <= max
+// }
+
+// // Usage
+//   if (isBreakPoint(768)) { 
+//     $('.portfolio-project').owlCarousel({
+//       items: 2,
+//     });
+//   } 
+
+
+
+
+
   window.sr = ScrollReveal();
   sr.reveal('.about-heading',{
     duration: 2000,

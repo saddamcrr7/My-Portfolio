@@ -196,6 +196,7 @@
                 color: $primary-color
 .nav-active
     color: $primary-color !important
+
 .mobile-menu
     width: 100%
     background: rgb(27, 27, 27)
@@ -208,7 +209,24 @@
         svg
             margin-top: 10px
             cursor: pointer
-            
+            path
+                margin: 0 auto
+                transition: 0.3s all
+    .humbager-active
+        svg
+            path
+                transform-origin: center
+                transform: translateX(-100%)
+                opacity: 0
+                stroke: $red
+                &:first-child,&:last-child
+                    transform: rotate(-45deg)
+                    opacity: 1
+                    transform: translateX(0)
+                &:first-child
+                    transform: rotate(-45deg)
+                &:last-child
+                    transform: rotate(45deg)
     nav
         margin: 0 auto
         width: 100%
@@ -222,7 +240,7 @@
             letter-spacing: 0
             transition: all 0.3s
             &:hover
-                color: $blue
+                color: $red
         .social-icon
             margin: 0 auto
             a
@@ -233,9 +251,10 @@
                 line-height: 35px
                 transition: all 0.3s
                 &:hover
-                    color: $blue
+                    color: $red
 .mobile-nav-active
     height: 300px !important
+    
 #about
     width: 100%
     background: $white
@@ -470,8 +489,9 @@
         .owl-dots
             width: 150px
             margin: 0 auto
+            z-index: 20
+            overflow: hidden
             .owl-dot
-                overflow: hidden
                 margin: 0 10px
                 float: left
                 cursor: pointer
@@ -493,14 +513,15 @@
             height: 100%
             overflow: hidden
             background: $white
-            box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2)
+            box-shadow: 0 3px 15px 0 rgba(0,0,0, .15)
             .main-content
                 width: 100%
                 height: 300px
                 overflow: hidden
                 img
                     width: 100%
-                    
+                    height: 300px
+                    transition: 1s
                     vertical-align: middle
                 .overley
                     position: absolute
@@ -523,19 +544,26 @@
                         .link
                             margin-left: 20px
             &:hover
-                box-shadow: 0 0 15px 0 rgba(0,0,0, .15)
-                .overley
-                    display: block
+                box-shadow: 0px 10px 30px 0px rgba(46,61,73,0.2)
+                .main-content
+                    img
+                        transform: scale(1.50)
+                    .overley
+                        display: block
 
             .title
                 padding: 10px 10px
+                border-bottom: 5px solid $red
+                transition: 0.3s
                 h5
-                    +montserrat(700,15px,16px,$primary-color)
+                    +montserrat(700,15px,16px,#212121)
                 p
                     margin: 0
                     font-size: 13px
                     font-family: 'lora',sans-serif
-
+                    color: #000000
+    .parallax-content ul
+        height: 120vh
         
 #services
     background: #f7f7f7
@@ -717,12 +745,13 @@
     width: 100%
     top: 0
     ul
+        width: 100%
+        height: 200vh
         li
             position: absolute
             top: 0
             width: 100%
-            height: 200vh
-            
+            height: 100%
             // pointer-events: none
             img
                 vertical-align: middle
