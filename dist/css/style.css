@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Rubik:400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Lora:400i,700i");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface");
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -1193,6 +1194,121 @@
   border-radius: 5px;
 }
 
+#testimonil {
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+#testimonil h1 {
+  font-family: "Rubik",Arial,Helvetica,Sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 51px;
+  color: #212121;
+}
+
+#testimonil h1 i {
+  color: #e4223f;
+  -webkit-animation: zoomIn-zoomOut 1s infinite linear;
+  animation: zoomIn-zoomOut 1s infinite linear;
+}
+
+#testimonil p {
+  font-family: 'lora', sans-serif;
+  font-size: 18px;
+  color: #212121;
+}
+
+#testimonil .clients-testimonial {
+  width: 100%;
+  margin-top: 30px;
+}
+
+#testimonil .clients-testimonial .client-says {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+#testimonil .clients-testimonial .client-says p {
+  font-family: "Montserrat",Arial,Helvetica,Sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #212121;
+}
+
+#testimonil .clients-testimonial .client-says p.name {
+  font-weight: bold;
+}
+
+#testimonil .clients-testimonial .client-says p.posoition {
+  font-family: 'lora', sans-serif;
+  color: grey;
+  font-size: 13px;
+}
+
+#testimonil .clients-testimonial .owl-item {
+  float: left;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-prev, #testimonil .clients-testimonial .owl-nav.disabled .owl-next {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  background: #f44336;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-prev:before, #testimonil .clients-testimonial .owl-nav.disabled .owl-next:before {
+  visibility: visible;
+  position: absolute;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  top: 0;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #f44336;
+  font-size: 25px;
+  line-height: 50px;
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  padding-left: 15px;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-prev {
+  left: 0;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-prev:before {
+  content: '\f060';
+  left: 0;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-next {
+  right: 0;
+}
+
+#testimonil .clients-testimonial .owl-nav.disabled .owl-next:before {
+  content: '\f061';
+  right: 0;
+}
+
+#testimonil .clients-testimonial .owl-dots {
+  display: none;
+}
+
+#testimonil .clients-testimonial:hover .owl-nav.disabled .owl-prev:before, #testimonil .clients-testimonial:hover .owl-nav.disabled .owl-next:before {
+  opacity: 1;
+}
+
 #contact {
   position: relative;
   overflow: hidden;
@@ -1226,7 +1342,7 @@
 }
 
 .contact-header .top-svg svg {
-  fill: #f7f7f7;
+  fill: #ffffff;
   position: absolute;
   top: 0;
   left: 0;

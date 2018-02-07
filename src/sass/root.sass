@@ -630,8 +630,81 @@
             .item-icon
                 background: $primary-color
                 border-radius: 5px
-                
-                
+#testimonil
+    position: relative           
+    background: $white
+    overflow: hidden
+    h1
+        +heading-font(700,50px,51px, #212121)
+        i
+            color: $primary-color
+            animation: zoomIn-zoomOut 1s infinite linear
+    p
+        font-family: 'lora', sans-serif
+        font-size: 18px
+        color: #212121
+    .clients-testimonial
+        width: 100%
+        margin-top: 30px
+        
+        .client-says
+            max-width: 1100px
+            padding: 0 20px
+            margin: 0 auto
+            p
+                +montserrat(400,16px,25px,#212121)
+                &.name
+                    font-weight: bold
+                &.posoition
+                    font-family: 'lora', sans-serif
+                    color: grey
+                    font-size: 13px
+        .owl-item
+            float: left
+        .owl-nav.disabled
+            .owl-prev, .owl-next
+                visibility: hidden
+                position: absolute
+                top: 50%
+                background: $red
+                height: 
+                &:before
+                    visibility: visible
+                    position: absolute
+                    font-family: FontAwesome
+                    font-style: normal
+                    font-weight: normal
+                    text-decoration: inherit
+                    top: 0
+                    cursor: pointer
+                    width: 50px
+                    height: 50px
+                    border-radius: 50px
+                    background: $red
+                    font-size: 25px
+                    line-height: 50px
+                    color: $white
+                    opacity: 0
+                    transition: all 0.7s 
+                    padding-left: 15px
+            .owl-prev
+                left: 0
+                &:before
+                    content: '\f060'
+                    left: 0
+                    
+            .owl-next
+                right: 0
+                &:before
+                    content: '\f061'
+                    right: 0
+        .owl-dots
+            display: none
+        &:hover
+            .owl-nav.disabled
+                .owl-prev, .owl-next
+                    &:before
+                        opacity: 1
 #contact
     position: relative
     overflow: hidden
@@ -653,7 +726,7 @@
         color: $white  
     .top-svg
         svg
-            fill: #f7f7f7
+            fill: $white
             position: absolute
             top: 0
             left: 0

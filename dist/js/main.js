@@ -93,7 +93,9 @@ $(document).ready(function() {
   $('.clients-testimonial').owlCarousel({
         items:1,
         slideBy: 1,
-        margin:10,
+        loop:true,
+        lazyContent: true,
+        margin:100,
         mergeFit: true,
         autoplay:true,
         autoplayTimeout:2000,
