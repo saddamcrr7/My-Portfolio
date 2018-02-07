@@ -90,7 +90,15 @@ $(document).ready(function() {
         autoplayHoverPause:true
     }
   );
-
+  $('.clients-testimonial').owlCarousel({
+        items:1,
+        slideBy: 1,
+        margin:10,
+        mergeFit: true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true
+  });
 
 //   var isBreakPoint = function (bp) {
 //     var bps = [320, 480, 768, 1024],

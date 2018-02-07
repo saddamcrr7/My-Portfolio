@@ -875,6 +875,15 @@
   background: #ffffff;
 }
 
+#portfolio .project-title {
+  font-family: "Montserrat",Arial,Helvetica,Sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 30px;
+  color: #222222;
+  margin-left: -32px;
+}
+
 #portfolio .portfolio-heading h1 {
   font-family: "Rubik",Arial,Helvetica,Sans-serif;
   font-weight: 700;
