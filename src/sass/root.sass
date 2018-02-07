@@ -504,10 +504,26 @@
                 overflow: hidden
                 display: block
                 transition: all 0.3s ease
+                span:before
+                    content: 'Front-End Dev'
+                    +montserrat(700,20px,30px,$red)
+                    position: absolute
+                    top: 40%
+                    right: 10%
+                    opacity: 0
+                &:first-child
+                    span:before
+                        content: 'Wordpress Dev'
+                &:last-child
+                    span:before
+                        content: 'Shopify Dev'
             .active
                 background: $red
                 width: 30px
                 box-shadow: none
+                .owl-dot
+                    span:before
+                        opacity: 1
         .project
             position: relative
             margin: 30px auto

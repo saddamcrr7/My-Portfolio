@@ -979,11 +979,36 @@
   transition: all 0.3s ease;
 }
 
+#portfolio .portfolio-project .owl-dots .owl-dot span:before {
+  content: 'Front-End Dev';
+  font-family: "Montserrat",Arial,Helvetica,Sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #f44336;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  opacity: 0;
+}
+
+#portfolio .portfolio-project .owl-dots .owl-dot:first-child span:before {
+  content: 'Wordpress Dev';
+}
+
+#portfolio .portfolio-project .owl-dots .owl-dot:last-child span:before {
+  content: 'Shopify Dev';
+}
+
 #portfolio .portfolio-project .owl-dots .active {
   background: #f44336;
   width: 30px;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+#portfolio .portfolio-project .owl-dots .active .owl-dot span:before {
+  opacity: 1;
 }
 
 #portfolio .portfolio-project .project {
