@@ -484,6 +484,7 @@
     .portfolio-project
         width: 100%
         height: 100%
+        position: relative
         .owl-item
             float: left
         .owl-nav.disabled
@@ -506,11 +507,17 @@
                 transition: all 0.3s ease
                 span:before
                     content: 'Front-End Dev'
-                    +montserrat(700,20px,30px,$red)
+                    +montserrat(700,15px,20px,$red)
                     position: absolute
-                    top: 40%
-                    right: 10%
+                    top: -40px
+                    right: 4%
                     opacity: 0
+                    border: 2px solid $red
+                    padding: 5px
+                    text-align: center
+                    width: 150px
+                    pointer-events: none
+                    transition: 0.3s ease
                 &:first-child
                     span:before
                         content: 'Wordpress Dev'
@@ -521,9 +528,8 @@
                 background: $red
                 width: 30px
                 box-shadow: none
-                .owl-dot
-                    span:before
-                        opacity: 1
+                span:before
+                    opacity: 1
         .project
             position: relative
             margin: 30px auto

@@ -946,6 +946,7 @@
 #portfolio .portfolio-project {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 #portfolio .portfolio-project .owl-item {
@@ -983,13 +984,21 @@
   content: 'Front-End Dev';
   font-family: "Montserrat",Arial,Helvetica,Sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 15px;
+  line-height: 20px;
   color: #f44336;
   position: absolute;
-  top: 40%;
-  right: 10%;
+  top: -40px;
+  right: 4%;
   opacity: 0;
+  border: 2px solid #f44336;
+  padding: 5px;
+  text-align: center;
+  width: 150px;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 #portfolio .portfolio-project .owl-dots .owl-dot:first-child span:before {
@@ -1007,7 +1016,7 @@
   box-shadow: none;
 }
 
-#portfolio .portfolio-project .owl-dots .active .owl-dot span:before {
+#portfolio .portfolio-project .owl-dots .active span:before {
   opacity: 1;
 }
 
