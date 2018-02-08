@@ -26,6 +26,7 @@ $(document).ready(function() {
 
     $('.mobile-menu nav a').click(function() {
       $(".mobile-menu nav").removeClass('mobile-nav-active');
+      $(".humbager").removeClass('humbager-active');
     });
 
     $(window).scroll(function() {
