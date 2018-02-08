@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
-
-  
     var a = 0;
     $(window).scroll(function() {
         var oTop = $(".skill").offset().top - window.innerHeight;
@@ -103,30 +101,15 @@ $(document).ready(function() {
         autoplayHoverPause:true
   });
 
-//   var isBreakPoint = function (bp) {
-//     var bps = [320, 480, 768, 1024],
-//         w = $(window).width(),
-//         min, max
-//     for (var i = 0, l = bps.length; i < l; i++) {
-//       if (bps[i] === bp) {
-//         min = bps[i-1] || 0
-//         max = bps[i]
-//         break
-//       }
-//     }
-//     return w > min && w <= max
-// }
+  $('.overley .icon .view').click(function() {
+    $('.project-gallery').css({"display" : "block"});
+  });
 
-// // Usage
-//   if (isBreakPoint(768)) { 
-//     $('.portfolio-project').owlCarousel({
-//       items: 2,
-//     });
-//   } 
+  $('.project-gallery .close-icon').click(function () {
+    $('.project-gallery').css({"display" : "none"});
+  });
 
-
-
-
+  
 
   window.sr = ScrollReveal();
   sr.reveal('.about-heading',{
@@ -201,30 +184,25 @@ $(document).ready(function() {
     delay: 200,
     viewFactor: 0.5
   });
+
+  var scene = $('#portfolio .parallax-content ul').get(0);
+  var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+  });
+  var scene = $('#contact .parallax-content ul').get(0);
+  var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+  });
+  parallaxInstance.friction(0.2, 0.2);
   
-    // var text = $('.header-btn button.skewSwipe').textContent || $('.header-btn button.skewSwipe').innerText;
-
-    // console.log(text);
-    
-
-    var scene = $('#portfolio .parallax-content ul').get(0);
-    var parallaxInstance = new Parallax(scene, {
-      relativeInput: true
-    });
-    var scene = $('#contact .parallax-content ul').get(0);
-    var parallaxInstance = new Parallax(scene, {
-      relativeInput: true
-    });
-    parallaxInstance.friction(0.2, 0.2);
-    
-    $(".scroll-top").click(function() {
-      $("html, body").animate({ scrollTop: 0 }, "slow");
-      return false;
-    });
-    
-    var Body = $('body');
-    Body.addClass('loaded');
-    // $(window).load(function() {
-    //   $('body').addClass('loaded');
-  // }); 
+  $(".scroll-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+  
+  var Body = $('body');
+  Body.addClass('loaded');
+//   $(window).load(function() {
+//     $('body').addClass('loaded');
+// }); 
 });

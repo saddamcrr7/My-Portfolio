@@ -588,7 +588,31 @@
                     color: #000000
     .parallax-content ul
         height: 120vh
-        
+    .project-gallery
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(to right, rgba(0, 90, 255, 0.85), #f8598be3 50%, #f7bf00d1)
+        z-index: 999
+        display: none
+        transition: all 0.5s
+        .close-icon
+            color: $red
+            float: right
+            font-size: 30px
+            margin-right: 25px
+            cursor: pointer
+        .current-img
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            text-align: center
+            img
+
 #services
     background: #f7f7f7
     // border-bottom: 1px solid rgba(0,0,255,0.1)

@@ -1121,6 +1121,42 @@
   height: 120vh;
 }
 
+#portfolio .project-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 90, 255, 0.85)), color-stop(50%, #f8598be3), to(#f7bf00d1));
+  background: -webkit-linear-gradient(left, rgba(0, 90, 255, 0.85), #f8598be3 50%, #f7bf00d1);
+  background: -o-linear-gradient(left, rgba(0, 90, 255, 0.85), #f8598be3 50%, #f7bf00d1);
+  background: linear-gradient(to right, rgba(0, 90, 255, 0.85), #f8598be3 50%, #f7bf00d1);
+  z-index: 999;
+  display: none;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#portfolio .project-gallery .close-icon {
+  color: #f44336;
+  float: right;
+  font-size: 30px;
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+#portfolio .project-gallery .current-img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 #services {
   background: #f7f7f7;
 }
