@@ -112,77 +112,56 @@ $(document).ready(function() {
   
 
   window.sr = ScrollReveal();
-  sr.reveal('.about-heading',{
-    duration: 2000,
-    // origin: 'left'
-  });
-  sr.reveal('.left-content',{
-    duration: 2000,
-    delay: 200,
-    origin: 'left'
-  });
-  sr.reveal('.middle-content',{
-    duration: 2000,
-    delay: 500,
-    // origin: 'left'
-  });
-  sr.reveal('.right-content',{
-    duration: 2000,
-    delay: 700,
-    // origin: 'left'
-  });
-  sr.reveal('.skill',{
-    duration: 2000,
-    // origin: 'left'
-  });
-  sr.reveal('.codepen',{
-    duration: 2000,
-    // origin: 'left'
-  });
-  sr.reveal('.github',{
-    duration: 2000,
-    delay: 500,
-    // origin: 'left'
-  });
-  sr.reveal('.work-title',{
-    duration: 2000,
-    // origin: 'left',
-  });
-  sr.reveal('.portfolio-item',{
-    duration: 1500,
-    delay: 200,
-    // origin: 'bottom',
-    // distance: '70px',
-    viewFactor: 0.5
-  });
-  sr.reveal('.portfolio-item.nd',{
-    duration: 1500,
-    delay: 500,
-    // origin: 'bottom',
-    // distance: '70px',
-    viewFactor: 0.5
+    sr.reveal('.about-heading',{
+      duration: 2000,
+    });
+    sr.reveal('.left-content',{
+      duration: 2000,
+      delay: 200,
+      origin: 'left'
+    });
+    sr.reveal('.middle-content',{
+      duration: 2000,
+      delay: 500,
+    });
+    sr.reveal('.right-content',{
+      duration: 2000,
+      delay: 700,
+    });
+    sr.reveal('.skill',{
+      duration: 2000,
+    });
+    sr.reveal('.codepen',{
+      duration: 2000,
+    });
+    sr.reveal('.github',{
+      duration: 2000,
+      delay: 500,
+    });
+    sr.reveal('.portfolio-project',{
+      duration: 1500,
+      delay: 200,
+      viewFactor: 0.5
+    });
 
-  });
-  sr.reveal('.service-item',{
-    duration: 2000,
-    viewFactor: 0.5
-  });
-  sr.reveal('.service-item.nd',{
-    duration: 2000,
-    delay: 200,
-    viewFactor: 0.5
-  });
-
-  sr.reveal('.service-item.rd',{
-    duration: 2000,
-    delay: 500,
-    viewFactor: 0.5
-  });
-
-  sr.reveal('.form-container',{
-    duration: 1500,
-    delay: 200,
-    viewFactor: 0.5
+    sr.reveal('.service-item',{
+      duration: 2000,
+      viewFactor: 0.5
+    });
+    sr.reveal('.service-item.nd',{
+      duration: 2000,
+      delay: 200,
+      viewFactor: 0.5
+    });
+    sr.reveal('.service-item.rd',{
+      duration: 2000,
+      delay: 500,
+      viewFactor: 0.5
+    });
+    sr.reveal('.form-container',{
+      duration: 1500,
+      delay: 200,
+      viewFactor: 0.5
   });
 
   var scene = $('#portfolio .parallax-content ul').get(0);
