@@ -635,38 +635,14 @@
 }
 
 #skill .left-content .skill-progress:nth-last-of-type(1n+0) .skill-progress-bar {
-  background: #e4223f;
-}
-
-#skill .left-content .skill-progress:nth-last-of-type(2n+0) .skill-progress-bar {
-  background: #6dc4f2;
-}
-
-#skill .left-content .skill-progress:nth-last-of-type(3n+0) .skill-progress-bar {
   background: #32d5ba;
 }
 
-#skill .middle-content .skill-progress:nth-last-of-type(1n+0) .skill-progress-bar {
-  background: #6dc4f2;
-}
-
-#skill .middle-content .skill-progress:nth-last-of-type(2n+0) .skill-progress-bar {
-  background: #32d5ba;
-}
-
-#skill .middle-content .skill-progress:nth-last-of-type(3n+0) .skill-progress-bar {
+#skill .middle-content .skill-progress .skill-progress-bar {
   background: #ffd13c;
 }
 
-#skill .right-content .skill-progress:nth-last-of-type(1n+0) .skill-progress-bar {
-  background: #32d5ba;
-}
-
-#skill .right-content .skill-progress:nth-last-of-type(2n+0) .skill-progress-bar {
-  background: #ffd13c;
-}
-
-#skill .right-content .skill-progress:nth-last-of-type(3n+0) .skill-progress-bar {
+#skill .right-content .skill-progress .skill-progress-bar {
   background: #e4223f;
 }
 
