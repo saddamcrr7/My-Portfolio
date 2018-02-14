@@ -1347,11 +1347,41 @@
   right: 0;
 }
 
-#testimonil .clients-testimonial .owl-dots {
-  display: none;
+#testimonil .clients-testimonial:hover .owl-nav.disabled .owl-prev:before, #testimonil .clients-testimonial:hover .owl-nav.disabled .owl-next:before {
+  opacity: 1;
 }
 
-#testimonil .clients-testimonial:hover .owl-nav.disabled .owl-prev:before, #testimonil .clients-testimonial:hover .owl-nav.disabled .owl-next:before {
+#testimonil .clients-testimonial .owl-dots {
+  width: 17%;
+  margin: 0 auto;
+  z-index: 20;
+  overflow: hidden;
+}
+
+#testimonil .clients-testimonial .owl-dots .owl-dot {
+  margin: 0 10px;
+  float: left;
+  cursor: pointer;
+  width: 25px;
+  height: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0 0 4px #32d5ba;
+  box-shadow: inset 0 0 4px #32d5ba;
+  overflow: hidden;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#testimonil .clients-testimonial .owl-dots .active {
+  background: #f44336;
+  width: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#testimonil .clients-testimonial .owl-dots .active span:before {
   opacity: 1;
 }
 

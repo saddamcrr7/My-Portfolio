@@ -723,13 +723,34 @@
                 &:before
                     content: '\f061'
                     right: 0
-        .owl-dots
-            display: none
+        
         &:hover
             .owl-nav.disabled
                 .owl-prev, .owl-next
                     &:before
                         opacity: 1
+        .owl-dots
+            width: 17%
+            margin: 0 auto
+            z-index: 20
+            overflow: hidden
+            .owl-dot
+                margin: 0 10px
+                float: left
+                cursor: pointer
+                width: 25px
+                height: 8px
+                border-radius: 8px
+                box-shadow: inset 0 0 4px $green
+                overflow: hidden
+                display: block
+                transition: all 0.3s ease
+            .active
+                background: $red
+                width: 30px
+                box-shadow: none
+                span:before
+                    opacity: 1
 #contact
     position: relative
     overflow: hidden
