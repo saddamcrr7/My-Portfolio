@@ -1798,6 +1798,14 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .buttons a {
+    font-size: 13px !important;
+    line-height: 40px !important;
+  }
+  .buttons .cv-button, .buttons .hire-button {
+    width: 130px !important;
+    height: 40px !important;
+  }
   .header-content h1, .header-content span {
     font-size: 3rem !important;
   }
