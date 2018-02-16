@@ -1009,13 +1009,11 @@
 
 #portfolio .portfolio-project .project .main-content {
   width: 100%;
-  height: 300px;
   overflow: hidden;
 }
 
 #portfolio .portfolio-project .project .main-content img {
   width: 100%;
-  height: 300px;
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -1026,7 +1024,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 300px;
   display: none;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 34, 63, 0.82)), to(rgba(228, 34, 150, 0.68)));
@@ -1037,7 +1034,7 @@
 }
 
 #portfolio .portfolio-project .project .main-content .overley .icon {
-  margin: 150px auto;
+  margin: 21% auto;
   max-width: 100px;
 }
 
@@ -1123,14 +1120,12 @@
 }
 
 #portfolio .project-gallery .current-img {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin-top: 100px;
   text-align: center;
+}
+
+#portfolio .project-gallery .current-img img {
+  max-width: 75%;
 }
 
 #services {
@@ -1352,7 +1347,7 @@
 }
 
 #testimonil .clients-testimonial .owl-dots {
-  width: 17%;
+  width: 190px;
   margin: 0 auto;
   z-index: 20;
   overflow: hidden;
@@ -1794,6 +1789,12 @@
   }
   .area-link .github {
     padding: 6% 15% !important;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .portfolio-project .owl-dots .owl-dot span:before {
+    display: none !important;
   }
 }
 
