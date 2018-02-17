@@ -859,6 +859,23 @@
   line-height: 30px;
   color: #222222;
   margin-left: -32px;
+  position: relative;
+}
+
+#portfolio .project-title:before {
+  content: '';
+  width: 65px;
+  height: 5px;
+  background: #e4223f;
+  position: absolute;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  bottom: -17%;
+}
+
+#portfolio:hover .project-title:before {
+  width: 20%;
 }
 
 #portfolio .portfolio-heading h1 {
@@ -968,7 +985,7 @@
   line-height: 20px;
   color: #f44336;
   position: absolute;
-  top: -65px;
+  top: -70px;
   right: 4%;
   opacity: 0;
   border: 2px solid #f44336;

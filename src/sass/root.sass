@@ -429,6 +429,19 @@
     .project-title
         +montserrat(700,30px,30px,#222222)
         margin-left: -32px
+        position: relative
+        &:before
+            content: ''
+            width: 65px
+            height: 5px
+            background: $primary-color
+            position: absolute
+            transition: all 1s
+            bottom: -17%
+    &:hover
+        .project-title
+            &:before
+                width: 20%
     .portfolio-heading
         h1
             +heading-font(700,50px,51px, #000)
@@ -491,7 +504,7 @@
                     content: 'Front-End Dev'
                     +montserrat(700,15px,20px,$red)
                     position: absolute
-                    top: -65px
+                    top: -70px
                     right: 4%
                     opacity: 0
                     border: 2px solid $red
