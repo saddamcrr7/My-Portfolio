@@ -83,6 +83,21 @@ $(document).ready(function() {
         loop:true,
         lazyContent: true,
         margin:10,
+        responsive:{
+          0:{
+              items:1,
+              nav:true
+          },
+          600:{
+              items:2,
+              nav:false
+          },
+          1000:{
+              items:3,
+              nav:true,
+              // loop:false
+          }
+        },
         mergeFit: true,
         autoplay:true,
         autoplayTimeout:2000,
@@ -91,7 +106,7 @@ $(document).ready(function() {
   );
   $('.clients-testimonial').owlCarousel({
         items:1,
-        slideBy: 1,
+        slideBy: 2,
         loop:true,
         lazyContent: true,
         margin:100,
